@@ -8,22 +8,22 @@ import {HiClock} from 'react-icons/hi'
 
 const Navbar = () => {
   return (
-    <header>
-      <nav>
+    <header className='w-full h-[250px]'>
+      <nav className='flex justify-between items-center w-full max-w-[1680px] mx-auto py-8'>
 
         {/* Far left half */}
-        <div>
+        <div className='flex justify-between items-center relative gap-16'>
           <img src={Logo} alt="logo"/>
-          <ul>
-            <li>Features <HiChevronDown /></li>
-            <ul>
+          <ul className='flex justify-between items-center gap-8'>
+            <li className='flex items-center'>Features <HiChevronDown /></li>
+            <ul className='absolute hidden'>
               <li><RiCalendarTodoFill /> Todo List</li>
               <li><BsFillCalendarEventFill /> Calendar</li>
               <li><FaBell /> Reminders</li>
               <li><HiClock /> Planning</li>
             </ul>
-            <li>Company <HiChevronDown /></li>
-            <ul>
+            <li className='flex items-center'>Company <HiChevronDown /></li>
+            <ul className='absolute hidden'>
               <li>History</li>
               <li>Our Team</li>
               <li>Blog</li>
@@ -34,9 +34,9 @@ const Navbar = () => {
         </div>
 
         {/* Far right half */}
-        <div>
+        <div className='flex justify-between items-center gap-16'>
           <button>Login</button>
-          <button><i class="fa fa-registered" aria-hidden="true"></i></button>
+          <button>Register</button>
         </div>
 
       </nav>

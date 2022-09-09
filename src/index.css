@@ -6,13 +6,18 @@
 @tailwind utilities;
 
 :root {
-  --almostWhite: hsl(0, 0%, 98%);
-  --mediumGray: hsl(0, 0%, 41%);
-  --almostBlack: hsl(0, 0%, 8%);
+  --almostWhite: #fafafa;
+  --mediumGray: #696969;
+  --almostBlack: #141414;
 }
 
 @layer base {
   * {
     @apply font-['Epilogue']
+  }
+
+  li {
+    @apply text-[#696969] cursor-pointer
+    hover:text-[#141414] duration-300
   }
 }
