@@ -1,6 +1,10 @@
 import React from 'react'
 import Logo from '../assets/logo.svg'
 import {HiChevronDown, HiChevronUp} from 'react-icons/hi'
+import {BsFillCalendarEventFill} from 'react-icons/bs'
+import {RiCalendarTodoFill} from 'react-icons/ri'
+import {FaBell} from 'react-icons/fa'
+import {HiClock} from 'react-icons/hi'
 
 const Navbar = () => {
   return (
@@ -13,10 +17,10 @@ const Navbar = () => {
           <ul>
             <li>Features <HiChevronDown /></li>
             <ul>
-              <li>Todo List</li>
-              <li>Calendar</li>
-              <li>Reminders</li>
-              <li>Planning</li>
+              <li><RiCalendarTodoFill /> Todo List</li>
+              <li><BsFillCalendarEventFill /> Calendar</li>
+              <li><FaBell /> Reminders</li>
+              <li><HiClock /> Planning</li>
             </ul>
             <li>Company <HiChevronDown /></li>
             <ul>
