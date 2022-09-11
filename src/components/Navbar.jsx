@@ -5,6 +5,9 @@ import {BsFillCalendarEventFill} from 'react-icons/bs'
 import {RiCalendarTodoFill} from 'react-icons/ri'
 import {FaBell} from 'react-icons/fa'
 import {HiClock} from 'react-icons/hi'
+import {FaBars} from 'react-icons/fa'
+import {AiOutlineClose} from 'react-icons/ai'
+
 
 const Navbar = () => {
 
@@ -17,6 +20,8 @@ const Navbar = () => {
   const handleDrop2 = () => {
     setDrop2(!drop2);
   }
+
+  const [nav, setNav] = useState(false);
 
   return (
     <header className='w-full h-[250px]'>
@@ -45,13 +50,34 @@ const Navbar = () => {
         </div>
 
         {/* Far right half */}
-        <div className='flex justify-between items-center gap-16 md:gap-4 text-[#696969]'>
+        <div className='flex justify-between items-center gap-16 md:gap-4 text-[#696969] lg:hidden'>
           <button className='hover:text-[#141414] duration-300 px-6 py-3'>
             Login
             </button>
           <button className='hover:text-[#141414] duration-300 border-2 px-6 py-3 hover:border-[#141414] rounded-xl'>
             Register
           </button>
+        </div>
+
+        {/* Dark Background for mobile menu */}
+        <div className='absolute top-0 left-0 w-full bg-[#141414]/70 h-screen'></div>
+
+        <FaBars className='cursor-pointer' size={23}/>
+
+        <div className='bg-white absolute w-[60%] h-screen top-0 right-0'>
+          <AiOutlineClose size={25}/>
+          <ul className=''>
+            <li>Features</li>
+            <li>Company</li>
+            <li>Careers</li>
+            <li>About</li>
+          </ul>
+
+          <div>
+            <button>Login</button>
+            <button>Register</button>
+          </div>
+          
         </div>
 
       </nav>
