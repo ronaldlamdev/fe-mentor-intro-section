@@ -43,21 +43,23 @@ const Navbar = () => {
 
   return (
     <header className='w-full h-[250px]'>
-      <nav className='flex justify-between items-center w-full max-w-[1680px] mx-auto py-8 px-8'>
+      <nav className='flex justify-between items-center w-full max-w-[1680px] mx-auto p-8'>
 
         {/* Far left half */}
         <div className='flex justify-between items-center relative gap-16 lg:gap-8'>
-          <img src={Logo} alt="logo"/>
+          <a href='/'>
+            <img src={Logo} alt="logo"/>
+          </a>
           <ul className='flex justify-between items-center gap-8 md:hidden'>
             <li onClick={handleDrop} className='flex items-center'>Features {drop ? <HiChevronUp className="ml-1"/> : <HiChevronDown className="ml-1"/>}</li>
-            <ul className={drop ? 'absolute top-7 left-24 w-[150px] flex flex-col items-center py-4 shadow-2xl rounded-lg' : 'hidden'}>
+            <ul className={drop ? 'absolute top-7 left-24 w-[150px] flex flex-col items-center py-4 shadow-2xl rounded-lg border border-gray-100' : 'hidden'}>
               <li className='flex items-center p-2'><RiCalendarTodoFill className='mr-3 text-[#7749c3]' /> Todo List</li>
               <li className='flex items-center p-2'><BsFillCalendarEventFill className='mr-3 text-[#4cd0e0]'/> Calendar</li>
               <li className='flex items-center p-2'><FaBell className='mr-3 text-[#e5d335]' /> Reminders</li>
               <li className='flex items-center p-2'><HiClock className='mr-3 text-purple-800' /> Planning</li>
             </ul>
             <li onClick={handleDrop2} className='flex items-center'>Company {drop2 ? <HiChevronUp className="ml-1"/> : <HiChevronDown className="ml-1"/>}</li>
-            <ul className={drop2 ? 'absolute top-7 left-64 w-[150px] flex flex-col items-center py-4 shadow-2xl rounded-lg' : 'hidden'}>
+            <ul className={drop2 ? 'absolute top-7 left-64 w-[150px] flex flex-col items-center py-4 shadow-2xl rounded-lg border border-gray-100' : 'hidden'}>
               <li className='p-2'>History</li>
               <li className='p-2'>Our Team</li>
               <li className='p-2'>Blog</li>
@@ -82,7 +84,7 @@ const Navbar = () => {
 
         <FaBars onClick={handleNav} className='cursor-pointer hidden md:block' size={23}/>
 
-        <div className={nav? 'md:bg-white md:absolute md:w-[60%] md:h-screen md:top-0 md:right-0 md:block hidden': 'bg-white absolute w-[60%] h-screen top-[-100%] right-0'}>
+        <div className={nav? 'md:bg-white md:absolute md:w-[60%] md:h-screen md:top-0 md:right-0 md:block md:duration-300 hidden': 'bg-white absolute w-[60%] h-screen top-[-100%] right-0 duration-300'}>
           <AiOutlineClose onClick={handleNav} className='md:absolute md:right-8 md:top-7 md:cursor-pointer md:block hidden' size={25}/>
           <ul className='flex flex-col items-center px-8 py-20'>
             <li onClick={handleMDrop1} className='py-2 flex items-center'>Features {mdrop1 ? <HiChevronUp className='ml-1' /> : <HiChevronDown className='ml-1'/>} </li>
