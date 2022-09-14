@@ -42,7 +42,7 @@ const Navbar = () => {
   }
 
   return (
-    <header className='w-full h-[250px]'>
+    <header className='w-full'>
       <nav className='flex justify-between items-center w-full max-w-[1680px] mx-auto p-8'>
 
         {/* Far left half */}
@@ -71,7 +71,7 @@ const Navbar = () => {
 
         {/* Far right half */}
         <div className='flex justify-between items-center text-[#696969] md:hidden'>
-          <button className='hover:text-[#141414] duration-300 px-6 py-3'>
+          <button className='hover:text-[#141414] duration-300 px-6'>
             Login
             </button>
           <button className='hover:text-[#141414] duration-300 border-2 px-6 py-3 hover:border-[#141414] rounded-xl'>
