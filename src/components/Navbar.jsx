@@ -52,14 +52,14 @@ const Navbar = () => {
           </a>
           <ul className='flex justify-between items-center gap-8 md:hidden'>
             <li onClick={handleDrop} className='flex items-center'>Features {drop ? <HiChevronUp className="ml-1"/> : <HiChevronDown className="ml-1"/>}</li>
-            <ul className={drop ? 'absolute top-7 left-24 w-[150px] flex flex-col items-center py-4 shadow-2xl rounded-lg border border-gray-100' : 'hidden'}>
+            <ul className={drop ? 'absolute top-7 left-24 w-[150px] flex flex-col items-center py-4 shadow-2xl rounded-lg border border-gray-100 bg-white' : 'hidden'}>
               <li className='flex items-center p-2'><RiCalendarTodoFill className='mr-3 text-[#7749c3]' /> Todo List</li>
               <li className='flex items-center p-2'><BsFillCalendarEventFill className='mr-3 text-[#4cd0e0]'/> Calendar</li>
               <li className='flex items-center p-2'><FaBell className='mr-3 text-[#e5d335]' /> Reminders</li>
               <li className='flex items-center p-2'><HiClock className='mr-3 text-purple-800' /> Planning</li>
             </ul>
             <li onClick={handleDrop2} className='flex items-center'>Company {drop2 ? <HiChevronUp className="ml-1"/> : <HiChevronDown className="ml-1"/>}</li>
-            <ul className={drop2 ? 'absolute top-7 left-64 w-[150px] flex flex-col items-center py-4 shadow-2xl rounded-lg border border-gray-100' : 'hidden'}>
+            <ul className={drop2 ? 'absolute top-7 left-64 w-[150px] flex flex-col items-center py-4 shadow-2xl rounded-lg border border-gray-100 bg-white' : 'hidden'}>
               <li className='p-2'>History</li>
               <li className='p-2'>Our Team</li>
               <li className='p-2'>Blog</li>
