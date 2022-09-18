@@ -29,11 +29,11 @@ const Main = () => {
             </button>
           </div>
           {/* Sponsors */}
-          <div className='flex items-center justify-start gap-8 lg:gap-4'>
-            <img src={DataBiz} alt='databiz'/>
-            <img src={AudioPhile} alt='audiphile'/>
-            <img src={Meet} alt='meet'/>
-            <img src={Maker} alt='maker'/>
+          <div className='flex items-center justify-start lg:justify-center gap-8 lg:gap-2 w-full lg:px-8 lg:mx-auto'>
+            <img className='lg:w-[80px]' src={DataBiz} alt='databiz'/>
+            <img className='lg:w-[80px]' src={AudioPhile} alt='audiphile'/>
+            <img className='lg:w-[80px]' src={Meet} alt='meet'/>
+            <img className='lg:w-[80px]' src={Maker} alt='maker'/>
           </div>
         </div>
 
